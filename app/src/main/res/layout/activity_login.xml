@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#eeeeee"
+    tools:context="com.ravindra.etiffin.LoginActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo"
+                android:layout_weight="40"/>
+            <View
+
+                android:layout_marginTop="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/colorPrimary"></View>
+
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="4dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="20dp"
+                android:id="@+id/cv_loginpanel"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+            <LinearLayout
+
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_mobilenumber"/>
+                <EditText
+                    android:id="@+id/et_mobilenumber"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="mobile number"
+                    android:inputType="numberDecimal"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_password"/>
+                <EditText
+                    android:inputType="textPassword"
+                    android:id="@+id/et_password"
+
+                    android:hint="password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_weight="5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp">
+                <Button
+                    android:id="@+id/btn_login"
+                    android:layout_weight=".5"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Login"
+                    android:background="@drawable/roundshape"
+                    android:layout_marginLeft="15dp"
+                    android:onClick="login"/>
+                <Button
+                    android:id="@+id/btn_forgetpassword"
+                    android:layout_weight=".5"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reset Password"
+                    android:background="@drawable/roundshape"
+                    android:layout_marginLeft="15dp"/>
+
+            </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_weight="5"
+                android:layout_gravity="center"
+                android:id="@+id/tv_newuser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New User Click Here!!"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:onClick="newuser"
+                android:textStyle="bold"/>
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="8dp"
+    app:cardCornerRadius="20dp"
+    android:id="@+id/cv_signuppanel">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <EditText
+        android:layout_marginTop="15dp"
+        android:id="@+id/et_newuser_mobilenumber"
+        android:textSize="25dp"
+        android:hint="Enter Mobile Number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+
+        android:layout_height="wrap_content"
+        android:text="Singnup"
+        android:background="@drawable/roundshape"
+        android:layout_marginLeft="15dp"
+        android:onClick="signup"
+        />
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+
+
+
+            <TextView
+                android:layout_weight="5"
+                android:id="@+id/tv_guestmode"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Use As Guest"
+                android:textStyle="bold"
+                android:onClick="setTv_guestmode"
+                android:textSize="25dp"/>
+    <TextView
+        android:layout_weight="5"
+        android:id="@+id/tv_login"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="login"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:onClick="setTv_login"/>
+        </LinearLayout>
+
+
